@@ -294,6 +294,10 @@ namespace CarouselView.FormsPlugin.iOS
 
         void Scroller_Scrolled(object sender, EventArgs e)
         {
+            if (Element == null)
+            {
+                return;
+            }
             var scrollView = (UIScrollView)sender;
             var point = scrollView.ContentOffset;
 
